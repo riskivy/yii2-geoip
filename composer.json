@@ -1,5 +1,5 @@
 {
-  "name": "lysenkobv/yii2-geoip",
+  "name": "riskivy/yii2-geoip",
   "description": "Yii 2 GeoIP extension. Returns country, city, lat, lng of current or specified IP (uses MaxMind's GeoIP2 databases)",
   "keywords": ["geoip", "geolocation", "maxmind", "yii2"],
   "type": "yii2-extension",
@@ -8,7 +8,7 @@
   "authors": [
     {
       "name": "Bohdan Lysenko",
-      "email": "lysenkobv@gmail.com"
+      "email": "riskivy@gmail.com"
     }
   ],
   "require": {
@@ -22,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "lysenkobv\\GeoIP\\": "src/"
+      "riskivy\\GeoIP\\": "src/"
     }
   }
 }
