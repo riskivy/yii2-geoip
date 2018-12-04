@@ -1,11 +1,11 @@
 <?php
 
 
-namespace lysenkobv\GeoIP;
+namespace riskivy\GeoIP;
 
 /**
  * Class Result
- * @package lysenkobv\GeoIP
+ * @package riskivy\GeoIP
  *
  * @property string|null city
  * @property string|null country

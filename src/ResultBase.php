@@ -1,7 +1,7 @@
 <?php
 
 
-namespace lysenkobv\GeoIP;
+namespace riskivy\GeoIP;
 
 
 use Exception;
