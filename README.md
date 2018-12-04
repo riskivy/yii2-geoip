@@ -1,6 +1,7 @@
 Yii 2 GeoIP extension
 =====================
-[![Latest Stable Version](https://poser.pugx.org/lysenkobv/yii2-geoip/version)](https://packagist.org/packages/lysenkobv/yii2-geoip) [![Total Downloads](https://poser.pugx.org/lysenkobv/yii2-geoip/downloads)](https://packagist.org/packages/lysenkobv/yii2-geoip) [![Build Status](https://travis-ci.org/lysenkobv/yii2-geoip.svg?branch=1.0.1)](https://travis-ci.org/lysenkobv/yii2-geoip) [![HHVM Status](https://img.shields.io/hhvm/lysenkobv/yii2-geoip.svg)](http://hhvm.h4cc.de/package/lysenkobv/yii2-geoip) [![CodeClimate](https://codeclimate.com/github/lysenkobv/yii2-geoip.png)](https://codeclimate.com/github/lysenkobv/yii2-geoip) 
+
+
 
 Provides information about geographical location of user by IP address.
 
@@ -84,10 +85,9 @@ $ip->location->lat; // -122.3942
 $ip->isoCode;  // "US"
 ```
 
------------
+FAQ
+---
 
-Thanks to [davicrystal](https://github.com/davicrystal), [krukru](https://github.com/krukru)
+__Q__: I get error `Required database not available at /usr/share/GeoIP/GeoIPCity.dat.`. What to do?
 
------------
-
-This product includes GeoLite2 data created by MaxMind, available from http://www.maxmind.com
+__A__: Download this file [http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz](http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz) and ungzip it into `/usr/share/GeoIP/GeoIPCity.dat`
