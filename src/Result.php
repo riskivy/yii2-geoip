@@ -9,14 +9,15 @@ namespace lysenkobv\GeoIP;
  *
  * @property string|null city
  * @property string|null country
+ * @property string|null subdivisions
  * @property Location location
  */
 class Result extends ResultBase {
     protected function getCity($data) {
         $value = null;
 
-        if (isset($data['city']['names']['en'])) {
-            $value = $data['city']['names']['en'];
+        if (isset($data['city']['names']['zh-CN'])) {
+            $value = $data['city']['names']['zh-CN'];
         }
 
         return $value;
@@ -25,8 +26,18 @@ class Result extends ResultBase {
     protected function getCountry($data) {
         $value = null;
 
-        if (isset($data['country']['names']['en'])) {
-            $value = $data['country']['names']['en'];
+        if (isset($data['country']['names']['zh-CN'])) {
+            $value = $data['country']['names']['zh-CN'];
+        }
+
+        return $value;
+    }
+    
+    protected function getSubdivisions($data){
+        $value = null;
+
+        if (isset($data['subdivisions'][0]['names']['zh-CN'])) {
+            $value = $data['subdivisions'][0]['names']['zh-CN'];
         }
 
         return $value;
