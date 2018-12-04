@@ -15,7 +15,7 @@ Currently available:
 Run
 
 ```bash
-$ php composer.phar require lysenkobv/yii2-geoip "~1.0"
+$ php composer.phar require riskivy/yii2-geoip "~1.0"
 ```
 
 #### OR 
@@ -25,7 +25,7 @@ add to your `composer.json`
 ```json
 {
     "require": {
-        "lysenkobv/yii2-geoip": "~1.0"
+        "riskivy/yii2-geoip": "~1.0"
     }
 }
 ```
@@ -47,7 +47,10 @@ $ php composer update
 $config = [
     ...
     'components' => [
-        'geoip' => ['class' => 'lysenkobv\GeoIP\GeoIP'],
+        'geoip' => [
+            'class' => 'riskivy\GeoIP\GeoIP',
+            'dbPath' => Yii::getAlias('@example/maxmind/database/city.mmdb')
+        ],
     ]
     ...
 ];
@@ -71,7 +74,7 @@ $ip->isoCode; // "US"
 ### Like object directly somewhere in your application
 
 ```php
-$geoip = new \lysenkobv\GeoIP\GeoIP();
+$geoip = new \riskivy\GeoIP\GeoIP();
 $ip = $geoip->ip("208.113.83.165");
 
 $ip->city; // "San Francisco"
@@ -79,23 +82,6 @@ $ip->country; // "United States"
 $ip->location->lng; // 37.7898
 $ip->location->lat; // -122.3942
 $ip->isoCode;  // "US"
-```
-
-### Provide a custom database (for example, if you own a licence)
-
-```php
-<?php
-
-$config = [
-    ...
-    'components' => [
-        'geoip' => [
-            'class' => 'lysenkobv\GeoIP\GeoIP',
-            'dbPath' => Yii::getAlias('@example/maxmind/database/city.mmdb')
-        ],
-    ]
-    ...
-];
 ```
 
 -----------
